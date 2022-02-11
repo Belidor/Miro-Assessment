@@ -1,3 +1,7 @@
 {
-    "baseUrl": "https://miro.com/signup/"
+  "baseUrl": "https://miro.com/signup/",
+  "fixturesFolder": "cypress/fixtures",
+  "screenshotOnRunFailure": true,
+  "supportFile": "cypress/support/index.ts",
+  "pluginsFile": "cypress/plugins/index.ts"
 }
