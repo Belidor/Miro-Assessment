@@ -5,7 +5,7 @@ declare global {
   namespace Cypress {
     interface Chainable {
       fillLoginFields(user: any): Chainable<String>;
-      checkSignUpCheckboxes(): Chainable<String>;
+      checkSignUpCheckboxes(terms: boolean, news: boolean): Chainable<String>;
       pressButton(selector: any): Chainable<String>;
     }
   }

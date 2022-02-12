@@ -14,9 +14,13 @@ Cypress.Commands.add('fillLoginFields', (user: any) => {
     cy.get(signUpPage.passwordField).type(user.password);
   }
 });
-Cypress.Commands.add('checkSignUpCheckboxes', () => {
-  cy.get(signUpPage.termsAndPolicyCheckbox).click();
-  cy.get(signUpPage.newsletterChackbox).click();
+Cypress.Commands.add('checkSignUpCheckboxes', (terms: boolean, news: boolean) => {
+  if(terms) {
+    cy.get(signUpPage.termsAndPolicyCheckbox).click();
+  }
+  if(news) {
+    cy.get(signUpPage.newsletterChackbox).click();
+  }
 });
 Cypress.Commands.add('pressButton', (selector: any) => {
   cy.get(selector).click();

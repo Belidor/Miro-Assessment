@@ -36,4 +36,18 @@ const userWithoutName = {
   password: '123456789'
 };
 
-export { succsessfulUser, userWithLongPassword, userWithShortPassword, userWithExistingEmail, userWithInvalidEmail, userWithoutName };
+const userWithoutNews = {
+  name: 'Username',
+  email: (Math.random() + 1).toString(36).substring(3) + '@cypress.io',
+  password: '123456789'
+};
+
+export {
+  succsessfulUser,
+  userWithLongPassword,
+  userWithShortPassword,
+  userWithExistingEmail,
+  userWithInvalidEmail,
+  userWithoutName,
+  userWithoutNews
+};
