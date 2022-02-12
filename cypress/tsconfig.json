@@ -13,6 +13,8 @@
             "./fixtures",
             "../node_modules/@types"
         ],
-        "types": ["node"]
+        "types": [
+            "node"
+        ]
     }
 }

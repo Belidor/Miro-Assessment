@@ -1,17 +1,39 @@
-export const succsessfulUser = {
+// @ts-check
+
+const succsessfulUser = {
   name: 'Username',
-  email: 'hello@cypress.io',
+  email: (Math.random() + 1).toString(36).substring(3) + '@cypress.io',
   password: '1234567890'
 };
 
-export const userWithLongPassword = {
+const userWithLongPassword = {
   name: 'Username',
-  email: 'hello@cypress.io',
-  password: 'Fixturesareagreatwaytomockdataorresponsestooutes'
+  email: (Math.random() + 1).toString(36).substring(3) + '@cypress.io',
+  password: 'Fixturesareagreatwaytomockdataorresponsestooutesasdasdasdasdasdasd'
 };
 
-export const userWithShortPassword = {
+const userWithShortPassword = {
   name: 'Username',
-  email: 'hello@cypress.io',
+  email: (Math.random() + 1).toString(36).substring(3) + '@cypress.io',
   password: '123'
 };
+
+const userWithExistingEmail = {
+  name: 'Username',
+  email: 'hello@cypress.io',
+  password: '123456789'
+};
+
+const userWithInvalidEmail = {
+  name: 'Username',
+  email: (Math.random() + 1).toString(36).substring(3) + 'cypress.io',
+  password: '123456789'
+};
+
+const userWithoutName = {
+  name: '',
+  email: (Math.random() + 1).toString(36).substring(3) + '@cypress.io',
+  password: '123456789'
+};
+
+export { succsessfulUser, userWithLongPassword, userWithShortPassword, userWithExistingEmail, userWithInvalidEmail, userWithoutName };

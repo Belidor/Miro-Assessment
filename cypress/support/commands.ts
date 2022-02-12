@@ -4,9 +4,15 @@
 import signUpPage from '../support/selectors/signUpPage';
 
 Cypress.Commands.add('fillLoginFields', (user: any) => {
-  cy.get(signUpPage.nameField).type(user.name);
-  cy.get(signUpPage.emailField).type(user.email);
-  cy.get(signUpPage.passwordField).type(user.password);
+  if(user.name) {
+    cy.get(signUpPage.nameField).type(user.name);
+  }
+  if(user.email) {
+    cy.get(signUpPage.emailField).type(user.email);
+  }
+  if(user.password) {
+    cy.get(signUpPage.passwordField).type(user.password);
+  }
 });
 Cypress.Commands.add('checkSignUpCheckboxes', () => {
   cy.get(signUpPage.termsAndPolicyCheckbox).click();
